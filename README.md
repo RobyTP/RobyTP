@@ -1,7 +1,6 @@
 - 👋 Hi, I’m @RobyTP
 - 👀 I’m interested in web project management
 - 🌱 I’m currently learning web project management
-- 💞️ I’m looking to collaborate on @@@@@@@@@
 - 📫 How to reach me DM
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
