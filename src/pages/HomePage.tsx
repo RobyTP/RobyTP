@@ -4,6 +4,7 @@ import { Search, Users, Briefcase, Shield, CheckCircle, TrendingUp } from 'lucid
 import Button from '../components/common/Button';
 import { useUser } from '../context/UserContext';
 import { skillsList } from '../data/mockData';
+import { Star } from "lucide-react";
 
 const HomePage: React.FC = () => {
   const { isAuthenticated, currentUser } = useUser();
