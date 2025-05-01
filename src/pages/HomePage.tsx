@@ -247,7 +247,6 @@ const HomePage: React.FC = () => {
                   <div className="text-center">
                     <Search className="h-12 w-12 text-white mx-auto mb-2" />
                     <h3 className="text-white font-medium text-lg">View All Categories</h3>
-                    <p className="text-blue-200 text-sm">5,000+ available jobs</p>
                   </div>
                 </div>
               </div>
