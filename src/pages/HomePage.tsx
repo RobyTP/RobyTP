@@ -18,10 +18,10 @@ const HomePage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="max-w-lg">
               <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-                Find the perfect <span className="text-blue-300">freelance</span> services for your business
+                Trouver le service parfait de <span className="text-blue-300">freelance</span> pour votre business
               </h1>
               <p className="text-xl mb-8 text-blue-100">
-                Connect with talented freelancers within minutes. Manage projects and payments with confidence.
+                Connectez avec de talentieux freelancers en quelques minutes. Dirigez des projets et payez avec confiance.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -43,12 +43,12 @@ const HomePage: React.FC = () => {
                   <>
                     <Link to="/register" className="w-full sm:w-auto">
                       <Button variant="secondary" size="lg" fullWidth>
-                        Join Now
+                        S'inscrire Maintenant
                       </Button>
                     </Link>
                     <Link to="/login" className="w-full sm:w-auto">
                       <Button variant="outline" size="lg" fullWidth className="bg-white bg-opacity-10 border-white border-opacity-30 text-white hover:bg-white hover:bg-opacity-20">
-                        Sign In
+                        S'enregistrer Maintenant
                       </Button>
                     </Link>
                   </>
@@ -56,7 +56,7 @@ const HomePage: React.FC = () => {
               </div>
               
               <div className="mt-8">
-                <p className="text-blue-200 mb-2">Popular skills:</p>
+                <p className="text-blue-200 mb-2">Compétences populaires :</p>
                 <div className="flex flex-wrap gap-2">
                   {popularSkills.map((skill, index) => (
                     <Link 
