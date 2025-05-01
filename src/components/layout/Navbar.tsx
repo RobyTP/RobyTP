@@ -25,10 +25,11 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <Briefcase className="h-8 w-8 text-green-600" />
+              <img src="/src/assets/monlogo.png" alt="Logo Travay Pam" className="h-10 w-auto" />
               <span className="ml-2 text-xl font-bold text-gray-900">Travay Pam</span>
             </Link>
           </div>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4">
