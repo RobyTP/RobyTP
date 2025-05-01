@@ -153,7 +153,6 @@ const HomePage: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"></div>
                 <div className="absolute bottom-0 left-0 p-4 w-full">
                   <h3 className="text-white font-medium text-lg">Web Development</h3>
-                  <p className="text-gray-300 text-sm">1,200+ jobs</p>
                 </div>
               </div>
             </Link>
@@ -168,7 +167,6 @@ const HomePage: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"></div>
                 <div className="absolute bottom-0 left-0 p-4 w-full">
                   <h3 className="text-white font-medium text-lg">Design</h3>
-                  <p className="text-gray-300 text-sm">950+ jobs</p>
                 </div>
               </div>
             </Link>
@@ -183,7 +181,6 @@ const HomePage: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"></div>
                 <div className="absolute bottom-0 left-0 p-4 w-full">
                   <h3 className="text-white font-medium text-lg">Writing</h3>
-                  <p className="text-gray-300 text-sm">820+ jobs</p>
                 </div>
               </div>
             </Link>
@@ -198,7 +195,6 @@ const HomePage: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"></div>
                 <div className="absolute bottom-0 left-0 p-4 w-full">
                   <h3 className="text-white font-medium text-lg">Marketing</h3>
-                  <p className="text-gray-300 text-sm">750+ jobs</p>
                 </div>
               </div>
             </Link>
@@ -213,7 +209,6 @@ const HomePage: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"></div>
                 <div className="absolute bottom-0 left-0 p-4 w-full">
                   <h3 className="text-white font-medium text-lg">Mobile Development</h3>
-                  <p className="text-gray-300 text-sm">680+ jobs</p>
                 </div>
               </div>
             </Link>
@@ -228,7 +223,6 @@ const HomePage: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"></div>
                 <div className="absolute bottom-0 left-0 p-4 w-full">
                   <h3 className="text-white font-medium text-lg">Data Science</h3>
-                  <p className="text-gray-300 text-sm">550+ jobs</p>
                 </div>
               </div>
             </Link>
@@ -243,7 +237,6 @@ const HomePage: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"></div>
                 <div className="absolute bottom-0 left-0 p-4 w-full">
                   <h3 className="text-white font-medium text-lg">Business</h3>
-                  <p className="text-gray-300 text-sm">480+ jobs</p>
                 </div>
               </div>
             </Link>
