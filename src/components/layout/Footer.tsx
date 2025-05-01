@@ -1,6 +1,7 @@
+import monlogo from "/src/assets/monlogo.png";
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Briefcase, Github, Twitter, Linkedin, Facebook } from 'lucide-react';
+import { Github, Twitter, Linkedin, Facebook } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -10,9 +11,10 @@ const Footer: React.FC = () => {
           {/* Logo and description */}
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="flex items-center">
-              <Briefcase className="h-7 w-7 text-green-400" />
+              <img src={monlogo} alt="Logo Travay Pam" className="h-8 w-auto" />
               <span className="ml-2 text-xl font-bold text-white">Travay Pam</span>
             </Link>
+
             <p className="mt-4 text-sm text-gray-400">
               The leading platform for freelancers and clients to collaborate on projects. Find talent or work on what you love.
             </p>
