@@ -12,16 +12,16 @@ const HomePage: React.FC = () => {
   
   return (
     <div>
-      {/* Hero Section */}
+      {/* Section Héro */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="max-w-lg">
               <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-                Trouver le service parfait de <span className="text-blue-300">freelance</span> pour votre business
+                Trouvez les meilleurs <span className="text-blue-300">freelances</span> pour votre entreprise
               </h1>
               <p className="text-xl mb-8 text-blue-100">
-                Connectez avec de talentieux freelancers en quelques minutes. Dirigez des projets et payez avec confiance.
+                Connectez-vous avec des freelances talentueux en quelques minutes. Gérez vos projets et paiements en toute confiance.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -29,13 +29,13 @@ const HomePage: React.FC = () => {
                   currentUser?.userType === 'client' ? (
                     <Link to="/freelancers">
                       <Button variant="secondary" size="lg" leftIcon={<Users size={20} />}>
-                        Find Talent
+                        Trouver des Talents
                       </Button>
                     </Link>
                   ) : (
                     <Link to="/jobs">
                       <Button variant="secondary" size="lg" leftIcon={<Briefcase size={20} />}>
-                        Find Work
+                        Trouver du Travail
                       </Button>
                     </Link>
                   )
@@ -43,12 +43,12 @@ const HomePage: React.FC = () => {
                   <>
                     <Link to="/register" className="w-full sm:w-auto">
                       <Button variant="secondary" size="lg" fullWidth>
-                        S'inscrire Maintenant
+                        S'inscrire
                       </Button>
                     </Link>
                     <Link to="/login" className="w-full sm:w-auto">
                       <Button variant="outline" size="lg" fullWidth className="bg-white bg-opacity-10 border-white border-opacity-30 text-white hover:bg-white hover:bg-opacity-20">
-                        S'enregistrer Maintenant
+                        Se Connecter
                       </Button>
                     </Link>
                   </>
@@ -74,7 +74,7 @@ const HomePage: React.FC = () => {
             <div className="hidden md:block">
               <img 
                 src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg" 
-                alt="Freelancers collaborating" 
+                alt="Freelances collaborant" 
                 className="rounded-lg shadow-xl object-cover h-96 w-full transform transition duration-500 hover:scale-105"
               />
             </div>
@@ -82,13 +82,13 @@ const HomePage: React.FC = () => {
         </div>
       </section>
       
-      {/* How it Works Section */}
+      {/* Section Comment ça marche */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">How FreelanceHub Works</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Comment ça fonctionne</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              A simple, straightforward process to connect with the right talent for your project
+              Un processus simple pour trouver le talent idéal pour votre projet
             </p>
           </div>
           
@@ -97,9 +97,9 @@ const HomePage: React.FC = () => {
               <div className="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
                 <Briefcase size={28} />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Post a Job</h3>
+              <h3 className="text-xl font-semibold mb-3">Publiez une Mission</h3>
               <p className="text-gray-600">
-                Create a detailed job posting describing your project, requirements, and budget. Be specific to attract the right candidates.
+                Créez une annonce détaillée décrivant votre projet, vos exigences et votre budget. Soyez précis pour attirer les bons candidats.
               </p>
             </div>
             
@@ -107,9 +107,9 @@ const HomePage: React.FC = () => {
               <div className="bg-teal-100 text-teal-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
                 <Users size={28} />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Select Talent</h3>
+              <h3 className="text-xl font-semibold mb-3">Sélectionnez un Talent</h3>
               <p className="text-gray-600">
-                Review proposals, profiles, and portfolios to find the perfect match for your project. Message candidates to discuss details.
+                Examinez les propositions, les profils et les portfolios pour trouver le freelance parfait. Échangez avec les candidats pour discuter des détails.
               </p>
             </div>
             
@@ -117,28 +117,28 @@ const HomePage: React.FC = () => {
               <div className="bg-amber-100 text-amber-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
                 <CheckCircle size={28} />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Complete Projects</h3>
+              <h3 className="text-xl font-semibold mb-3">Réalisez vos Projets</h3>
               <p className="text-gray-600">
-                Work with your chosen freelancer through milestones, communicate effectively, and release payment when satisfied.
+                Travaillez avec votre freelance choisi à travers des étapes, communiquez efficacement et effectuez le paiement une fois satisfait.
               </p>
             </div>
           </div>
           
           <div className="text-center mt-12">
             <Link to="/register">
-              <Button size="lg" className="px-8">Get Started</Button>
+              <Button size="lg" className="px-8">Commencer</Button>
             </Link>
           </div>
         </div>
       </section>
       
-      {/* Categories Section */}
+      {/* Section Catégories */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Find Services in These Categories</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Découvrez nos Catégories</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Browse our diverse categories to find the skills you need
+              Parcourez nos différentes catégories pour trouver les compétences dont vous avez besoin
             </p>
           </div>
           
@@ -147,12 +147,12 @@ const HomePage: React.FC = () => {
               <div className="aspect-w-1 aspect-h-1 relative overflow-hidden rounded-lg bg-gray-100">
                 <img 
                   src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg" 
-                  alt="Web Development" 
+                  alt="Développement Web" 
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"></div>
                 <div className="absolute bottom-0 left-0 p-4 w-full">
-                  <h3 className="text-white font-medium text-lg">Web Development</h3>
+                  <h3 className="text-white font-medium text-lg">Développement Web</h3>
                 </div>
               </div>
             </Link>
@@ -175,12 +175,12 @@ const HomePage: React.FC = () => {
               <div className="aspect-w-1 aspect-h-1 relative overflow-hidden rounded-lg bg-gray-100">
                 <img 
                   src="https://images.pexels.com/photos/3059747/pexels-photo-3059747.jpeg" 
-                  alt="Writing" 
+                  alt="Rédaction" 
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"></div>
                 <div className="absolute bottom-0 left-0 p-4 w-full">
-                  <h3 className="text-white font-medium text-lg">Writing</h3>
+                  <h3 className="text-white font-medium text-lg">Rédaction</h3>
                 </div>
               </div>
             </Link>
@@ -203,12 +203,12 @@ const HomePage: React.FC = () => {
               <div className="aspect-w-1 aspect-h-1 relative overflow-hidden rounded-lg bg-gray-100">
                 <img 
                   src="https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg" 
-                  alt="Mobile Development" 
+                  alt="Développement Mobile" 
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"></div>
                 <div className="absolute bottom-0 left-0 p-4 w-full">
-                  <h3 className="text-white font-medium text-lg">Mobile Development</h3>
+                  <h3 className="text-white font-medium text-lg">Développement Mobile</h3>
                 </div>
               </div>
             </Link>
@@ -217,12 +217,12 @@ const HomePage: React.FC = () => {
               <div className="aspect-w-1 aspect-h-1 relative overflow-hidden rounded-lg bg-gray-100">
                 <img 
                   src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg" 
-                  alt="Data Science" 
+                  alt="Science des Données" 
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"></div>
                 <div className="absolute bottom-0 left-0 p-4 w-full">
-                  <h3 className="text-white font-medium text-lg">Data Science</h3>
+                  <h3 className="text-white font-medium text-lg">Science des Données</h3>
                 </div>
               </div>
             </Link>
@@ -246,7 +246,7 @@ const HomePage: React.FC = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
                     <Search className="h-12 w-12 text-white mx-auto mb-2" />
-                    <h3 className="text-white font-medium text-lg">View All Categories</h3>
+                    <h3 className="text-white font-medium text-lg">Voir Toutes les Catégories</h3>
                   </div>
                 </div>
               </div>
@@ -255,13 +255,13 @@ const HomePage: React.FC = () => {
         </div>
       </section>
       
-      {/* Testimonials Section */}
+      {/* Section Témoignages */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Témoignages</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              See what our clients and freelancers have to say about their experiences
+              Découvrez ce que nos clients et freelances disent de leur expérience
             </p>
           </div>
           
@@ -270,16 +270,16 @@ const HomePage: React.FC = () => {
               <div className="flex items-center mb-6">
                 <img 
                   src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" 
-                  alt="Client Avatar" 
+                  alt="Avatar Client" 
                   className="h-12 w-12 rounded-full object-cover mr-4" 
                 />
                 <div>
                   <h4 className="font-medium text-gray-900">Robert Johnson</h4>
-                  <p className="text-gray-500 text-sm">CEO, TechStart</p>
+                  <p className="text-gray-500 text-sm">PDG, TechStart</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-6">
-                "We found an exceptional developer who helped us launch our MVP in record time. The quality of talent on FreelanceHub is outstanding."
+                "Nous avons trouvé un développeur exceptionnel qui nous a aidé à lancer notre MVP en un temps record. La qualité des talents sur la plateforme est remarquable."
               </p>
               <div className="flex text-amber-400">
                 <Star className="h-5 w-5 fill-current" />
@@ -294,16 +294,16 @@ const HomePage: React.FC = () => {
               <div className="flex items-center mb-6">
                 <img 
                   src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" 
-                  alt="Freelancer Avatar" 
+                  alt="Avatar Freelance" 
                   className="h-12 w-12 rounded-full object-cover mr-4" 
                 />
                 <div>
                   <h4 className="font-medium text-gray-900">Jessica Chen</h4>
-                  <p className="text-gray-500 text-sm">Graphic Designer</p>
+                  <p className="text-gray-500 text-sm">Designer UX/UI</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-6">
-                "FreelanceHub has transformed my career. I'm now able to work with clients from around the world and have complete control over my schedule."
+                "La plateforme a transformé ma carrière. Je peux maintenant travailler avec des clients du monde entier et avoir un contrôle total sur mon emploi du temps."
               </p>
               <div className="flex text-amber-400">
                 <Star className="h-5 w-5 fill-current" />
@@ -318,16 +318,16 @@ const HomePage: React.FC = () => {
               <div className="flex items-center mb-6">
                 <img 
                   src="https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg" 
-                  alt="Client Avatar" 
+                  alt="Avatar Client" 
                   className="h-12 w-12 rounded-full object-cover mr-4" 
                 />
                 <div>
                   <h4 className="font-medium text-gray-900">Mark Wilson</h4>
-                  <p className="text-gray-500 text-sm">Marketing Director, GrowthCo</p>
+                  <p className="text-gray-500 text-sm">Directeur Marketing, GrowthCo</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-6">
-                "The content writers we hired through FreelanceHub have helped us double our organic traffic. The platform makes it easy to find specialized talent."
+                "Les rédacteurs que nous avons engagés nous ont aidés à doubler notre trafic organique. La plateforme facilite la recherche de talents spécialisés."
               </p>
               <div className="flex text-amber-400">
                 <Star className="h-5 w-5 fill-current" />
@@ -341,30 +341,30 @@ const HomePage: React.FC = () => {
         </div>
       </section>
       
-      {/* CTA Section */}
+      {/* Section CTA */}
       <section className="py-20 bg-gradient-to-r from-teal-600 to-teal-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to get started?</h2>
+          <h2 className="text-3xl font-bold mb-6">Prêt à commencer ?</h2>
           <p className="text-xl text-teal-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of clients and freelancers who are already succeeding with FreelanceHub
+            Rejoignez des milliers de clients et freelances qui réussissent déjà avec notre plateforme
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link to="/register">
-              <Button
-                size="lg"
-                className="bg-green-600 text-white border border-transparent hover:bg-transparent hover:border-white hover:text-white px-8 transition-all duration-200"
-              >
-                Sign Up Free
-              </Button>
+            <Button
+              size="lg"
+              className="bg-green-600 text-white border border-transparent hover:bg-transparent hover:border-white hover:text-white px-8 transition-all duration-200"
+            >
+              Inscription Gratuite
+            </Button>
 
             </Link>
             <Link to="/jobs">
               <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:bg-opacity-10 px-8">
-                Find Talent
+                Trouver des Talents
               </Button>
             </Link>
           </div>
-          <p className="mt-6 text-teal-200 text-sm">No credit card required to get started</p>
+          <p className="mt-6 text-teal-200 text-sm">Aucune carte de crédit requise pour commencer</p>
         </div>
       </section>
     </div>

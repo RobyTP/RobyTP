@@ -1,4 +1,4 @@
-import monlogo from "/src/assets/monlogo.png";
+import monlogo from "../../assets/monlogo.png";
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Github, Twitter, Linkedin, Facebook } from 'lucide-react';
@@ -8,15 +8,14 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-800 text-gray-200">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo and description */}
+          {/* Logo et description */}
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="flex items-center">
               <img src={monlogo} alt="Logo Travay Pam" className="h-8 w-auto" />
               <span className="ml-2 text-xl font-bold text-white">Travay Pam</span>
             </Link>
-
             <p className="mt-4 text-sm text-gray-400">
-              The leading platform for freelancers and clients to collaborate on projects. Find talent or work on what you love.
+              La plateforme leader pour les freelances et les clients qui collaborent sur des projets. Trouvez des talents ou travaillez sur ce que vous aimez.
             </p>
             <div className="flex mt-6 space-x-4">
               <a href="#" className="text-gray-400 hover:text-white">
@@ -34,80 +33,80 @@ const Footer: React.FC = () => {
             </div>
           </div>
           
-          {/* Quick links */}
+          {/* Liens rapides */}
           <div>
-            <h3 className="text-sm font-semibold text-white tracking-wider uppercase">For Clients</h3>
+            <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Pour les Clients</h3>
             <ul className="mt-4 space-y-2">
               <li>
                 <Link to="/freelancers" className="text-gray-400 hover:text-white text-sm">
-                  Find Freelancers
+                  Trouver des Freelances
                 </Link>
               </li>
               <li>
                 <Link to="/jobs/post" className="text-gray-400 hover:text-white text-sm">
-                  Post a Job
+                  Publier une Mission
                 </Link>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white text-sm">
-                  How to Hire
+                  Comment Recruter
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white text-sm">
-                  Success Stories
+                  Témoignages
                 </a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-sm font-semibold text-white tracking-wider uppercase">For Freelancers</h3>
+            <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Pour les Freelances</h3>
             <ul className="mt-4 space-y-2">
               <li>
                 <Link to="/jobs" className="text-gray-400 hover:text-white text-sm">
-                  Find Work
+                  Trouver du Travail
                 </Link>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white text-sm">
-                  Create Profile
+                  Créer un Profil
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white text-sm">
-                  Skills Tests
+                  Tests de Compétences
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white text-sm">
-                  Community
+                  Communauté
                 </a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Resources</h3>
+            <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Ressources</h3>
             <ul className="mt-4 space-y-2">
               <li>
                 <a href="#" className="text-gray-400 hover:text-white text-sm">
-                  Help & Support
+                  Aide & Support
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white text-sm">
-                  Trust & Safety
+                  Confiance & Sécurité
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white text-sm">
-                  Terms of Service
+                  Conditions d'Utilisation
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white text-sm">
-                  Privacy Policy
+                  Politique de Confidentialité
                 </a>
               </li>
             </ul>
@@ -116,7 +115,7 @@ const Footer: React.FC = () => {
         
         <div className="mt-12 border-t border-gray-700 pt-8">
           <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} Travay Pam. All rights reserved.
+            &copy; {new Date().getFullYear()} Travay Pam. Tous droits réservés.
           </p>
         </div>
       </div>
