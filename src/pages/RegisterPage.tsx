@@ -31,12 +31,12 @@ const RegisterPage: React.FC = () => {
     e.preventDefault();
     
     if (!formData.name || !formData.email || !formData.password || !formData.confirmPassword) {
-      toast.error('Please fill in all required fields');
+      toast.error('Veuillez remplir tous les champs requis');
       return;
     }
     
     if (formData.password !== formData.confirmPassword) {
-      toast.error('Passwords do not match');
+      toast.error('Les mots de passe ne correspondent pas');
       return;
     }
     
@@ -52,11 +52,11 @@ const RegisterPage: React.FC = () => {
       const success = await register(userData, formData.password, formData.userType);
       
       if (success) {
-        toast.success('Account created successfully!');
-        navigate('/dashboard');
+        toast.success('Compte créé avec succès !');
+        navigate('/configuration-profil');
       }
     } catch (error) {
-      toast.error('Registration failed. Please try again later.');
+      toast.error("L'inscription a échoué. Veuillez réessayer plus tard.");
       console.error(error);
     } finally {
       setIsLoading(false);
@@ -67,17 +67,17 @@ const RegisterPage: React.FC = () => {
     <div className="min-h-[calc(100vh-64px)] bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-xl shadow-lg">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900">Create your account</h2>
+          <h2 className="text-3xl font-bold text-gray-900">Créez votre compte</h2>
           <p className="mt-2 text-gray-600">
-            Join FreelanceHub to find great opportunities
+            Rejoignez Travay Pam pour trouver de belles opportunités
           </p>
         </div>
         
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-          {/* Account Type Selection */}
+          {/* Sélection du type de compte */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              I want to...
+              Je souhaite...
             </label>
             <div className="grid grid-cols-2 gap-4">
               <button
@@ -93,8 +93,8 @@ const RegisterPage: React.FC = () => {
                   <User className={`h-6 w-6 mx-auto ${
                     formData.userType === 'freelancer' ? 'text-blue-500' : 'text-gray-500'
                   }`} />
-                  <span className="block mt-2 font-medium">Find Work</span>
-                  <span className="text-xs mt-1 block text-gray-500">I'm a freelancer</span>
+                  <span className="block mt-2 font-medium">Trouver du travail</span>
+                  <span className="text-xs mt-1 block text-gray-500">Je suis freelance</span>
                 </div>
               </button>
               
@@ -111,8 +111,8 @@ const RegisterPage: React.FC = () => {
                   <Briefcase className={`h-6 w-6 mx-auto ${
                     formData.userType === 'client' ? 'text-blue-500' : 'text-gray-500'
                   }`} />
-                  <span className="block mt-2 font-medium">Hire Talent</span>
-                  <span className="text-xs mt-1 block text-gray-500">I'm a client</span>
+                  <span className="block mt-2 font-medium">Recruter des talents</span>
+                  <span className="text-xs mt-1 block text-gray-500">Je suis client</span>
                 </div>
               </button>
             </div>
@@ -121,7 +121,7 @@ const RegisterPage: React.FC = () => {
           <div className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                Full Name
+                Nom complet
               </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -135,14 +135,14 @@ const RegisterPage: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   className="pl-10 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="John Doe"
+                  placeholder="Jean Dupont"
                 />
               </div>
             </div>
             
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email Address
+                Adresse email
               </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -157,14 +157,14 @@ const RegisterPage: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   className="pl-10 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="you@example.com"
+                  placeholder="vous@example.com"
                 />
               </div>
             </div>
             
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                Password
+                Mot de passe
               </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -178,14 +178,14 @@ const RegisterPage: React.FC = () => {
                   value={formData.password}
                   onChange={handleChange}
                   className="pl-10 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="Create a password"
+                  placeholder="Créez un mot de passe"
                 />
               </div>
             </div>
             
             <div>
               <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
-                Confirm Password
+                Confirmez le mot de passe
               </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -199,7 +199,7 @@ const RegisterPage: React.FC = () => {
                   value={formData.confirmPassword}
                   onChange={handleChange}
                   className="pl-10 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="Confirm your password"
+                  placeholder="Confirmez votre mot de passe"
                 />
               </div>
             </div>
@@ -214,20 +214,20 @@ const RegisterPage: React.FC = () => {
               isLoading={isLoading}
               rightIcon={<ArrowRight size={18} />}
             >
-              Create Account
+              Créer mon compte
             </Button>
           </div>
           
           <div className="text-xs text-gray-500 mt-4">
-            By signing up, you agree to our <a href="#" className="text-blue-600 hover:underline">Terms of Service</a> and <a href="#" className="text-blue-600 hover:underline">Privacy Policy</a>.
+            En vous inscrivant, vous acceptez nos <a href="#" className="text-blue-600 hover:underline">Conditions d'utilisation</a> et notre <a href="#" className="text-blue-600 hover:underline">Politique de confidentialité</a>.
           </div>
         </form>
 
         <div className="mt-6">
           <p className="text-center text-sm text-gray-600">
-            Already have an account?{' '}
+            Vous avez déjà un compte ?{' '}
             <Link to="/login" className="font-medium text-blue-600 hover:text-blue-500">
-              Sign in
+              Se connecter
             </Link>
           </p>
         </div>
