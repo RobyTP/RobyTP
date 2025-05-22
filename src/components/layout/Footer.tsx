@@ -1,7 +1,6 @@
 import monlogo from "../../assets/monlogo.png";
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Twitter, Linkedin, Facebook } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -17,20 +16,6 @@ const Footer: React.FC = () => {
             <p className="mt-4 text-sm text-gray-400">
               La plateforme leader pour les freelances et les clients qui collaborent sur des projets. Trouvez des talents ou travaillez sur ce que vous aimez.
             </p>
-            <div className="flex mt-6 space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                <Github className="h-5 w-5" />
-              </a>
-            </div>
           </div>
           
           {/* Liens rapides */}
@@ -78,11 +63,6 @@ const Footer: React.FC = () => {
                   Tests de Compétences
                 </a>
               </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white text-sm">
-                  Communauté
-                </a>
-              </li>
             </ul>
           </div>
           
@@ -96,17 +76,16 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white text-sm">
-                  Confiance & Sécurité
+                  <Link to="/conditions-utilisation#top" className="text-gray-400 hover:text-white text-sm">
+                    Conditions d’utilisation
+                  </Link>
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white text-sm">
-                  Conditions d'Utilisation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white text-sm">
-                  Politique de Confidentialité
+                  <Link to="/confidentialite#top" className="text-gray-400 hover:text-white text-sm">
+                    Politique de confidentialité
+                  </Link>
                 </a>
               </li>
             </ul>
