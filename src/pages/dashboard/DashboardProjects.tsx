@@ -42,7 +42,7 @@ const DashboardProjects: React.FC = () => {
               }`}
               onClick={() => setActiveTab('all')}
             >
-              All Projects
+              Tous les projets
             </button>
             <button 
               className={`pb-3 px-1 ${

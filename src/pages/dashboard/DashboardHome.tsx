@@ -8,37 +8,35 @@ import Button from '../../components/common/Button';
 const DashboardHome: React.FC = () => {
   const { currentUser } = useUser();
   const isClient = currentUser?.userType === 'client';
-  
-  // Filter data based on user type
+
   const userJobs = isClient 
     ? mockJobs.filter(job => job.clientId === currentUser.id).slice(0, 3)
-    : mockJobs.slice(0, 3); // For demo, show all jobs to freelancers
-  
+    : mockJobs.slice(0, 3);
+
   const userProjects = mockProjects.filter(project => 
     isClient 
       ? project.clientId === currentUser.id 
       : project.freelancerId === currentUser.id
   );
-  
-  // Get recent notifications (placeholder)
+
   const recentNotifications = [
-    { id: 'n1', message: 'New proposal received on "Front-end Developer" job', time: '2 hours ago' },
-    { id: 'n2', message: 'Project milestone "Initial Design" completed', time: '1 day ago' },
-    { id: 'n3', message: 'You have 3 unread messages', time: '2 days ago' },
+    { id: 'n1', message: 'Nouvelle proposition reçue pour le poste "Développeur Front-end"', time: 'Il y a 2 heures' },
+    { id: 'n2', message: 'Étape "Design initial" du projet terminée', time: 'Il y a 1 jour' },
+    { id: 'n3', message: 'Vous avez 3 messages non lus', time: 'Il y a 2 jours' },
   ];
 
   return (
     <div className="space-y-6">
-      {/* Welcome Card */}
+      {/* Carte de bienvenue */}
       <div className="bg-white rounded-lg shadow-sm overflow-hidden">
         <div className="p-6 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-          <h1 className="text-2xl font-bold">Welcome back, {currentUser?.name}!</h1>
+          <h1 className="text-2xl font-bold">Bon retour, {currentUser?.name} !</h1>
           <p className="mt-1 text-blue-100">
-            Here's an overview of your {isClient ? 'projects and jobs' : 'jobs and earnings'}
+            Voici un aperçu de vos {isClient ? 'projets et emplois' : 'emplois et gains'}
           </p>
         </div>
-        
-        {/* Quick Stats */}
+
+        {/* Statistiques rapides */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6">
           <div className="bg-blue-50 rounded-lg p-4">
             <div className="flex items-center">
@@ -47,7 +45,7 @@ const DashboardHome: React.FC = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500">
-                  {isClient ? 'Active Jobs' : 'Available Jobs'}
+                  {isClient ? 'Emplois actifs' : 'Emplois disponibles'}
                 </p>
                 <p className="text-xl font-semibold">
                   {isClient 
@@ -57,7 +55,7 @@ const DashboardHome: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="bg-green-50 rounded-lg p-4">
             <div className="flex items-center">
               <div className="bg-green-100 rounded-full p-2 mr-3">
@@ -65,7 +63,7 @@ const DashboardHome: React.FC = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500">
-                  {isClient ? 'Active Projects' : 'Ongoing Projects'}
+                  {isClient ? 'Projets actifs' : 'Projets en cours'}
                 </p>
                 <p className="text-xl font-semibold">
                   {userProjects.filter(p => p.status === 'active').length}
@@ -73,7 +71,7 @@ const DashboardHome: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="bg-purple-50 rounded-lg p-4">
             <div className="flex items-center">
               <div className="bg-purple-100 rounded-full p-2 mr-3">
@@ -81,7 +79,7 @@ const DashboardHome: React.FC = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500">
-                  New Notifications
+                  Nouvelles notifications
                 </p>
                 <p className="text-xl font-semibold">
                   {recentNotifications.length}
@@ -89,7 +87,7 @@ const DashboardHome: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="bg-amber-50 rounded-lg p-4">
             <div className="flex items-center">
               <div className="bg-amber-100 rounded-full p-2 mr-3">
@@ -97,7 +95,7 @@ const DashboardHome: React.FC = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500">
-                  {isClient ? 'Total Spent' : 'Total Earned'}
+                  {isClient ? 'Total dépensé' : 'Total gagné'}
                 </p>
                 <p className="text-xl font-semibold">
                   ${isClient ? '3,250' : '4,120'}
@@ -107,8 +105,7 @@ const DashboardHome: React.FC = () => {
           </div>
         </div>
       </div>
-      
-      {/* Recent Activity */}
+    {/* Recent Activity */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Recent Jobs/Projects */}
         <div className="md:col-span-2 bg-white rounded-lg shadow-sm p-6">
@@ -130,7 +127,7 @@ const DashboardHome: React.FC = () => {
                       <div>
                         <h3 className="font-medium text-gray-900">{job.title}</h3>
                         <p className="text-sm text-gray-500 mt-1">
-                          {job.proposals} proposals • Posted {new Date(job.createdAt).toLocaleDateString()}
+                          {job.proposals} proposé • Posté {new Date(job.createdAt).toLocaleDateString()}
                         </p>
                       </div>
                       <span className={`px-2 py-1 text-xs rounded-full ${
@@ -138,24 +135,24 @@ const DashboardHome: React.FC = () => {
                           ? 'bg-green-100 text-green-800' 
                           : 'bg-gray-100 text-gray-800'
                       }`}>
-                        {job.status === 'open' ? 'Active' : 'Closed'}
+                        {job.status === 'Ouvert' ? 'Actif' : 'Fermé'}
                       </span>
                     </div>
                     <div className="mt-2 flex items-center text-sm text-gray-700">
                       <DollarSign className="h-4 w-4 mr-1 text-gray-400" />
-                      {job.budget.type === 'fixed' 
-                        ? `${job.budget.currency} ${job.budget.amount} (Fixed)` 
-                        : `${job.budget.currency} ${job.budget.amount}/hr (Hourly)`}
+                      {job.budget.type === 'fixé' 
+                        ? `${job.budget.currency} ${job.budget.amount} (Fixé)` 
+                        : `${job.budget.currency} ${job.budget.amount}/hr (horaire)`}
                     </div>
                   </div>
                 </Link>
               ))
             ) : (
               <div className="text-center py-8">
-                <p className="text-gray-500 mb-4">No jobs found</p>
+                <p className="text-gray-500 mb-4">Pas de travail trouvé</p>
                 {isClient && (
                   <Button variant="primary" size="sm">
-                    Post a Job
+                    Poster un travail
                   </Button>
                 )}
               </div>
@@ -167,10 +164,10 @@ const DashboardHome: React.FC = () => {
         <div className="bg-white rounded-lg shadow-sm p-6">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-semibold text-gray-900">
-              Recent Notifications
+              Notifications Récentes
             </h2>
             <button className="text-sm text-blue-600 hover:text-blue-800">
-              Mark all as read
+              Marqué tout comme lu
             </button>
           </div>
           
@@ -191,10 +188,10 @@ const DashboardHome: React.FC = () => {
         <div className="bg-white rounded-lg shadow-sm p-6">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-semibold text-gray-900">
-              Active Projects
+              Projets actifs
             </h2>
             <Link to="/dashboard/projects" className="text-sm text-blue-600 hover:text-blue-800 flex items-center">
-              View all <ChevronRight className="h-4 w-4 ml-1" />
+              Tout voir <ChevronRight className="h-4 w-4 ml-1" />
             </Link>
           </div>
           
@@ -207,11 +204,11 @@ const DashboardHome: React.FC = () => {
                       <div>
                         <h3 className="font-medium text-gray-900">{project.title}</h3>
                         <p className="text-sm text-gray-500 mt-1">
-                          {project.milestones.filter(m => m.status === 'completed').length}/{project.milestones.length} milestones complete
+                          {project.milestones.filter(m => m.status === 'completed').length}/{project.milestones.length} Objectif atteint
                         </p>
                       </div>
                       <span className="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-800">
-                        In Progress
+                        En progression
                       </span>
                     </div>
                   </div>
@@ -219,7 +216,7 @@ const DashboardHome: React.FC = () => {
               ))
             ) : (
               <div className="text-center py-6">
-                <p className="text-gray-500">No active projects</p>
+                <p className="text-gray-500">Aucun projet actif</p>
               </div>
             )}
           </div>
@@ -229,10 +226,10 @@ const DashboardHome: React.FC = () => {
         <div className="bg-white rounded-lg shadow-sm p-6">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-semibold text-gray-900">
-              Recent Messages
+              Messages récents
             </h2>
             <Link to="/messages" className="text-sm text-blue-600 hover:text-blue-800 flex items-center">
-              View all <ChevronRight className="h-4 w-4 ml-1" />
+              Tout voir <ChevronRight className="h-4 w-4 ml-1" />
             </Link>
           </div>
           
@@ -268,7 +265,7 @@ const DashboardHome: React.FC = () => {
               ))
             ) : (
               <div className="text-center py-6">
-                <p className="text-gray-500">No messages</p>
+                <p className="text-gray-500">Aucun message</p>
               </div>
             )}
           </div>

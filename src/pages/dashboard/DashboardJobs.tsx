@@ -67,7 +67,7 @@ const DashboardJobs: React.FC = () => {
           
           {isClient && (
             <Button leftIcon={<Plus size={18} />}>
-              Post a New Job
+              Poster un nouveau travail
             </Button>
           )}
         </div>
