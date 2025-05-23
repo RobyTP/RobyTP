@@ -48,6 +48,17 @@ const DashboardPage: React.FC = () => {
            (path === "" && location.pathname === "/dashboard");
   };
   
+
+const handleLogout = async () => {
+  console.log("Logout button clicked");
+  try {
+    await axios.post('/logout');
+    window.location.href = '/';
+  } catch (error) {
+    console.error("Erreur lors de la déconnexion :", error);
+  }
+};
+
   return (
     <div className="bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -81,7 +92,10 @@ const DashboardPage: React.FC = () => {
                     <Link to="/dashboard/settings" className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded">
                       Profile Settings
                     </Link>
-                    <button className="block w-full text-left px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded">
+                    <button 
+                     onClick={handleLogout}
+                    className="block w-full text-left px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
+                    >
                       Sign Out
                     </button>
                   </div>
