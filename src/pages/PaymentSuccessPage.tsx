@@ -7,7 +7,7 @@ const PaymentSuccessPage: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // You might want to verify the payment status with your backend here
+    // You might want to verify the payment status with your d here
   }, []);
 
   return (
