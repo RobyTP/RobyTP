@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Github, Twitter, Linkedin, Facebook } from 'lucide-react';
 import monlogo from '../../assets/monlogo.png';
-=======
->>>>>>> 868e04eb9c92673b45cd7ca27599e2ac210943da
+
 
 const Footer: React.FC = () => {
   const user = null;
@@ -57,15 +55,14 @@ const Footer: React.FC = () => {
             <p className="mt-4 text-sm text-white/80">
               Plateforme pour freelances et clients collaborant sur des projets. Trouvez un talent ou faites ce que vous aimez.
             </p>
-<<<<<<< HEAD
+
             <div className="flex mt-6 space-x-4">
               <a href="#"><Facebook className="h-5 w-5 hover:text-white" /></a>
               <a href="#"><Twitter className="h-5 w-5 hover:text-white" /></a>
               <a href="#"><Linkedin className="h-5 w-5 hover:text-white" /></a>
               <a href="#"><Github className="h-5 w-5 hover:text-white" /></a>
             </div>
-=======
->>>>>>> 868e04eb9c92673b45cd7ca27599e2ac210943da
+
           </div>
 
           {/* Clients */}
@@ -92,7 +89,6 @@ const Footer: React.FC = () => {
 
           {/* Newsletter */}
           <div>
-<<<<<<< HEAD
             <h3 className="text-sm font-semibold uppercase">Newsletter</h3>
             <p className="mt-4 text-sm text-white/80">
               Recevez les dernières missions et actus directement par mail. Restez connecté à la communauté.
@@ -117,7 +113,7 @@ const Footer: React.FC = () => {
             {error && (
               <p role="alert" aria-live="assertive" className="mt-2 text-sm text-red-400 animate-pulse">{error}</p>
             )}
-=======
+
             <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Pour les Clients</h3>
             <ul className="mt-4 space-y-2">
               <li>
@@ -187,7 +183,6 @@ const Footer: React.FC = () => {
                 </a>
               </li>
             </ul>
->>>>>>> 868e04eb9c92673b45cd7ca27599e2ac210943da
           </div>
         </div>
 
