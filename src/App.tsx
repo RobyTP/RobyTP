@@ -1,4 +1,6 @@
 import React from 'react';
+import ConfidentialitePage from './pages/ConfidentialitePage';
+import ConditionsUtilisation from './pages/ConditionsUtilisation';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
@@ -28,6 +30,8 @@ function App() {
           <Navbar />
           <main className="flex-grow">
             <Routes>
+              <Route path="/confidentialite" element={<ConfidentialitePage />} />
+              <Route path="/conditions-utilisation" element={<ConditionsUtilisation />} />
               <Route path="/" element={<HomePage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
